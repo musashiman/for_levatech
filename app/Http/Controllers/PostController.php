@@ -10,7 +10,8 @@ class PostController extends Controller
     //
   public function index(Post $post)
 {
-    $value = $post->get();
-    return view("posts.index",compact("value"));
+    
+    return view("posts/index")->with(["posts" =>$post->getPaginateByLimit()]);
+    
 }
 }
