@@ -13,4 +13,9 @@ class Post extends Model
     {
         return $this->orderBy("updated_at","DESC")->limit($count)->get();
     }
+    
+    public function getPaginateOrderBy(int $count=10)
+    {
+        return $this->orderBy("updated_at","DESC")->paginate($count);
+    }
 }
