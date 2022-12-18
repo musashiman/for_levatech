@@ -13,6 +13,7 @@
     
     </head>
     <body class="antialiased">
+      <a href="/posts/create">create</a>
       <h1 class="title">title</h1>
       <div class="posts">
           <div class="post">
@@ -29,5 +30,7 @@
       <div class="paginate">
           {{$posts->links()}}
       </div>
+      
+      
     </body>
 </html>
